@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ALS Barbershop — Про нас</title>
+        <link rel = "icon" type = "image/png" href = "favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/styles/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <nav>
+                    <div id="burgerMenuDesk" class="burger-menu-desk">
+                        <i id="openIcon" class="fa-solid fa-bars fa-2xl" style="color: #E9C664;"></i>
+                        <i id="closeIcon" class="fa-solid fa-xmark fa-2xl d-none" style="color: #E9C664;"></i>
+                    </div>
+                    <ul id="deskMenu" class="desktop-menu">
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="services.html">Послуги</a></li>
+                        <li><a href="about.html">Про нас</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                    </ul>
+                    <ul id="deskMenuVis" class="desktop-menu-visible">
+                       <li><a href="index.html">Головна</a></li>
+                        <li><a href="services.html">Послуги</a></li>
+                        <li><a href="about.html">Про нас</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                    </ul>
+                    <ul id="deskMenuBurger" class="desktop-menu-burger">
+                        <li><a href="#home">Головна</a></li>
+                        <li><a href="#services">Послуги</a></li>
+                        <li><a href="#info">Інформація</a></li>
+                        <li><a href="#discount">Знижки</a></li>
+                        <li><a href="#reviews">Відгуки</a></li>
+                        <li><a href="#brands">Бренди</a></li>
+                        <li><a href="#contact">Контакти</a></li>
+                    </ul>
+                    <button class="btn-book">
+                        <a href="#"><p>Записатися</p></a>
+                    </button>
+                </nav>
+               <div class="logo">
+                    <h1>Про нас</h1>
+                </div>
+            </header>
+            <main>
+                <div class="barbers">
+                    <div class="barbers-text">
+                        <p>Знайомтесь з командою</p>
+                        <h2>Наші барбери</h2>
+                    </div>
+                    <div class="barb-blocks" id="barbersContainer">
+                    </div>
+                </div>
+                <div class="info" id="info">
+                    <div class="info-block">
+                        <img src="assets/images/icons/icon razor.svg" alt="" width="50px">
+                        <h2>2500</h2>
+                        <p>Голінь</p>
+                    </div>
+                     <div class="info-block">
+                        <img src="assets/images/icons/icon scissors.svg" alt="" width="50px">
+                        <h2>4500</h2>
+                        <p>Стрижок</p>
+                    </div>
+                     <div class="info-block">
+                        <img src="assets/images/icons/icon barbershop.svg" alt="" width="50px">
+                        <h2>23</h2>
+                        <p>Відкритих салонів</p>
+                    </div>
+                </div>
+                <div class="discount-third" id="discount">
+                    <div class="d-block">
+                        <h2>Знижка 25%</h2>
+                        <p>Тільки до кінця місяця — кожна стрижка та гоління з бонусом 25%! Подаруй собі ідеальний образ і заощади. Акція діє у всіх наших салонах.</p>
+                        <button><a href="">Записатися</a></button>
+                    </div>
+                    <div class="disc-img">
+                        <img src="assets/images/discountimg.png" alt="">
+                    </div>
+                </div>
+                <div class="brand-block" id="brands">
+                    <div class="brand-text">
+                        <h2>Бренди, з якими ми працюємо</h2>
+                        <p>Ми співпрацюємо тільки з перевіреними та якісними брендами професійної косметики для чоловіків.</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="brand-img">
+                        <img src="assets/images/icons/brand1.webp" alt="">  
+                        <img src="assets/images/icons/brand2.webp" alt="">
+                        <img src="assets/images/icons/brands3.jpg" alt="">
+                        <img src="assets/images/icons/brand4.webp" alt="">
+                        <img src="assets/images/icons/brand5.webp" alt="">
+                        <img src="assets/images/icons/brand6.webp" alt="">
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="contacts" id="contact">
+                    <div class="contacts-text">
+                        <h2>Зв’яжіться з нами</h2>
+                        <p>Ми завжди раді бачити вас у нашій перукарні! Записатися на стрижку, отримати консультацію чи просто поставити запитання — пишіть або телефонуйте, відповімо миттєво.</p>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-block">
+                            <img src="assets/images/icons/icon location.svg" alt="">
+                            <div class="contact-text-inside">
+                                <h3>Адреса</h3>
+                                <p>304 North Cardinal St.<br /> Dorchester Center, MA 02124</p>
+                            </div>
+                        </div>
+                        <div class="contact-block">
+                            <img src="assets/images/icons/icon email.svg" alt="">
+                            <div class="contact-text-inside">
+                                <h3>Email</h3>
+                                <p>info@company.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-block">
+                            <img src="assets/images/icons/icon phone.svg" alt="">
+                            <div class="contact-text-inside">
+                                <h3>Телефон</h3>
+                                <p>(+63) 555 1212<br />(+63) 555 1212</p>
+                            </div>
+                        </div>
+                        <div class="contact-block">
+                            <img src="assets/images/icons/icon clock.svg" alt="">
+                            <div class="contact-text-inside">
+                                <h3>Графік роботи</h3>
+                                <p>Пн - Пт: 10:00 - 18:00<br />Сб - Нд: 10:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <p class="copyright">© Barbershop 2024–2025. Всі права захищено</p>
+                </div>
+            </footer>
+            <button id="toTopBtn" aria-label="Вгору">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+        <script src="assets/scripts/scripts.js"></script>
+        <script src="assets/scripts/about.js"></script>
+    </body>
+</html>

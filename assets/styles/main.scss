@@ -1,0 +1,2009 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+* {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+
+$gold: #E9C664;
+$dark: #212121;
+$black: #000000;
+$white: #ffffff;
+
+.container {
+    .d-none {
+        display: none;
+    }
+
+    header {
+        background-image: url('../images/headerbg.png');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 400px;
+
+        .logo {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-family: "Abril Fatface", serif;
+                color: $white;
+                font-size: 70px;
+                margin: 0;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            img {
+                width: 60%;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+
+            .burger-menu-desk {
+                padding-top: 25px;
+                padding-left: 10px;
+                cursor: pointer;
+            }
+
+            .desktop-menu {
+                li {
+                    padding-bottom: 10px;
+                    padding-left: 20px;
+                    list-style: none;
+
+                    a {
+                        font-family: "Inter", sans-serif;
+                        color: $white;
+                        font-size: 25px;
+                        text-decoration: none;
+                        font-weight: 300;
+                    }
+
+                    &:first-child {
+                        padding-top: 20px;
+                    }
+                    
+                    &.active a {
+                         font-weight: 800;
+                    }
+                }
+            }
+
+            .desktop-menu-visible {
+                display: none;
+            }
+
+            .btn-book {
+                margin-top: 15px;
+                margin-right: 15px;
+                width: 191px;
+                height: 50px;
+                background: none;
+                border: 2px solid $gold;
+                transition: 0.3s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    text-transform: uppercase;
+                }
+
+                &:hover {
+                    background: $gold;
+                    border: 2px solid $gold;
+
+                    a {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        background-image: url('../images/mainbg.png');
+        background-size: cover;
+        background-position: center;
+
+        .services {
+            .text {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                padding-top: 20px;
+
+                p {
+                    color: $gold;
+                    margin: 0;
+                    font-weight: 300;
+                    font-size: 19px;
+                }
+
+                h1 {
+                    color: $white;
+                    margin: 0;
+                    font-weight: 300;
+                    font-size: 50px;
+                    font-family: "Abril Fatface", serif;
+                }
+            }
+
+            .main-blocks {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: relative;
+
+                .blocks {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 40px;
+                    margin-top: 50px;
+                    margin-bottom: 60px;
+
+                    .block {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 337px;
+                        height: 337px;
+                        border: 2px solid $gold;
+                        color: $white;
+                        text-align: center;
+
+                        h3 {
+                            text-transform: uppercase;
+                            font-family: "Abril Fatface", serif;
+                            font-weight: 400;
+                        }
+
+                        p {
+                            padding-left: 40px;
+                            padding-right: 40px;
+                        }
+                    }
+                }
+
+                .img-block-head {
+                    position: absolute;
+                    top: 200px;
+                    left: 1100px;
+                    width: 600px;
+                    height: auto;
+                    display: none;
+                }
+
+                .btn-explore {
+                    text-transform: uppercase;
+                    background: none;
+                    border: 2px solid $gold;
+                    height: 50px;
+                    margin-bottom: 150px;
+                    transition: 0.3s;
+                    display: flex;
+                    align-items: center;
+
+                    a {
+                        color: $gold;
+                        text-decoration: none;
+                        font-size: 20px;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+
+                    &:hover {
+                        background: $gold;
+                        border: 2px solid $gold;
+
+                        a {
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+
+        .price-discount {
+            background: $dark;
+            padding-bottom: 50px;
+
+            .pricing-block {
+                display: flex;
+                flex-wrap: wrap;
+                padding-top: 60px;
+
+                .pricing-item {
+                    margin-bottom: 50px;
+                    width: 100%;
+
+                    .pricing-row {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                        font-size: 25px;
+                        color: $white;
+                        align-items: center;
+                        padding-left: 20px;
+                        padding-right: 20px;
+
+                        .pricing-title, .pricing-amount {
+                            font-family: "Abril Fatface", serif;
+                            font-weight: 400;
+                        }
+
+                        .pricing-line {
+                            width: 50%;
+                            height: 2px;
+                            border-bottom: 1px solid $gold;
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    .pricing-description {
+                        color: $white;
+                        font-size: 14px;
+                        font-family: "Inter", sans-serif;
+                        font-weight: 400;
+                        padding: 0 40px;
+                        width: 95%;
+                    }
+                }
+            }
+            
+            .discount {
+                background: $gold;
+                margin: 10px 30px;
+            }
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: $dark;
+            padding-top: 50px;
+            padding-bottom: 100px;
+
+            .info-block {
+                width: 270px;
+                height: 250px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 50px;
+
+                h2 {
+                    font-size: 50px;
+                    color: $gold;
+                    font-weight: 400;
+                    margin: 0;
+                    padding: 0;
+                    margin-top: 35px;
+                    font-family: "Abril Fatface", serif;
+                }
+
+                p {
+                    text-transform: uppercase;
+                    font-size: 22px;
+                    font-weight: 400;
+                    color: $white;
+                    margin: 0;
+                    padding: 0;
+                    margin-top: 35px;
+                    font-family: "Abril Fatface", serif;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .discount {
+            background: $gold;
+
+            .d-block {
+                padding: 30px;
+
+                h3 {
+                     font-family: "Inter", sans-serif;
+                     font-size: 20px;
+                     font-weight: 900;
+                     text-transform: uppercase;
+                     margin-top: 50px;
+                }
+
+                h2 {
+                    font-size: 50px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    font-family: "Abril Fatface", serif;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+                button {
+                    width: 200px;
+                    color: $gold;
+                    text-transform: uppercase;
+                    background: $black;
+                    border: none;
+                    height: 50px;
+                    transition: 0.3s;
+
+                    a {
+                        color: $gold;
+                        text-decoration: none;
+                        font-size: 20px;
+                        font-weight: 900;
+                    }
+
+                    &:hover {
+                        background: $gold;
+                        border: 2px solid $black;
+
+                        a {
+                            color: $black;
+                        }
+                    }
+                }
+                
+                &.white-btn-text button {
+                     color: white;
+                     a { color: white; }
+                }
+            }
+
+            .disc-img {
+                display: flex;
+                justify-content: end;
+
+                img {
+                    width: 50%;
+                }
+            }
+        }
+
+            .discount-sec {
+                background: #E9C664;
+                margin: 10px 30px;
+
+                .d-block {
+                    padding: 30px;
+
+                    h3 {
+                        font-family: "Inter", sans-serif;
+                        font-size: 20px;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                        margin-top: 50px;
+                    }
+
+                    h2 {
+                        font-size: 50px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        font-family: "Abril Fatface", serif;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+
+                    button {
+                        width: 150px;
+                        color: white;
+                        text-transform: uppercase;
+                        background: #000000;
+                        border: none;
+                        height: 50px;
+                        transition: 0.3s;
+
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-size: 16px;
+                            font-weight: 900;
+                        }
+
+                        &:hover {
+                            background: #E9C664;
+                            border: 2px solid #000000;
+
+                            a {
+                                color: #000000;
+                            }
+                        }
+                    }
+                }
+
+                .disc-img-second {
+                    display: flex;
+                    justify-content: end;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+        .discount-third {
+            background: #E9C664;
+
+            .d-block {
+                padding: 30px;
+
+                h2 {
+                    font-size: 50px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    font-family: "Abril Fatface", serif;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+                button {
+                    width: 150px;
+                    color: #E9C664;
+                    text-transform: uppercase;
+                    background: #000000;
+                    border: none;
+                    height: 50px;
+                    transition: 0.3s;
+
+                    a {
+                        color: #E9C664;
+                        text-decoration: none;
+                        font-size: 20px;
+                    }
+
+                    &:hover {
+                        background: #E9C664;
+                        border: 2px solid #000000;
+
+                        a {
+                            color: #000000;
+                        }
+                    }
+                }
+            }
+
+            .disc-img {
+                display: flex;
+                justify-content: end;
+
+                img {
+                    width: 50%;
+                }
+            }
+        }
+
+        .discount-fourth {
+            background: #E9C664;
+            margin: 30px 30px;
+                
+            .d-block {
+                padding: 30px;
+
+                h3 {
+                    font-family: "Inter", sans-serif;
+                    font-size: 20px;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    margin-top: 50px;
+                }
+
+                h2 {
+                    font-size: 50px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    font-family: "Abril Fatface", serif;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+                button {
+                    width: 150px;
+                    color: white;
+                    text-transform: uppercase;
+                    background: #000000;
+                    border: none;
+                    height: 50px;
+                    transition: 0.3s;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-size: 16px;
+                        font-weight: 900;
+                    }
+
+                    &:hover {
+                        background: #E9C664;
+                        border: 2px solid #000000;
+
+                        a {
+                            color: #000000;
+                        }
+                    }
+                }
+            }
+
+            .disc-img {
+                display: flex;
+                justify-content: end;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .reviews {
+            background: $white;
+            padding: 60px;
+
+            .section-header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 60px;
+
+                h2 {
+                    margin: 0;
+                    font-size: 35px;
+                    font-family: "Abril Fatface", serif;
+                }
+
+                p {
+                    font-size: 20px;
+                    color: $gold;
+                }
+            }
+
+            .reviews-block {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                .review-card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    img {
+                        margin-bottom: 50px;
+                        border-radius: 50%;
+                        width: 80px;
+                        height: 80px;
+                    }
+
+                    .review-text {
+                        margin-bottom: 50px;
+                        text-align: center;
+                    }
+
+                    .review-author {
+                        margin-bottom: 70px;
+                        text-transform: uppercase;
+                        color: $gold;
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+
+                    &:last-child {
+                        .review-author {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .news {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background: $dark;
+            padding-bottom: 50px;
+
+            .news-text {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding-top: 60px;
+                padding-bottom: 60px;
+
+                p {
+                    text-transform: uppercase;
+                    color: $gold;
+                    font-size: 20px;
+                    font-weight: 500;
+                    font-family: "Inter", sans-serif;
+                    margin: 0;
+                }
+
+                h2 {
+                    font-family: "Abril Fatface", serif;
+                    font-size: 50px;
+                    margin: 0;
+                    font-weight: 400;
+                    color: $white;
+                    text-transform: uppercase;
+                }
+            }
+
+            .news-cards {
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 20px;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .card-inside {
+                        background: #000;
+                        padding: 36px 50px;
+                        height: 200px;
+
+                        h3 {
+                            color: $white;
+                            font-size: 22px;
+                            font-weight: 400;
+                            font-family: "Abril Fatface", serif;
+                            margin: 0;
+                        }
+
+                        p {
+                            color: $white;
+                            font-family: "Inter", sans-serif;
+                            font-size: 16px;
+                            font-weight: 400;
+                        }
+
+                        button {
+                            background: none;
+                            border: none;
+                            padding: 0;
+
+                            a {
+                                color: $gold;
+                                font-family: "Inter", sans-serif;
+                                font-size: 13px;
+                                font-weight: 600;
+                                text-decoration: none;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .news-main {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background: #212121;
+            padding-bottom: 50px;
+
+            .news-text {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding-top: 60px;
+                padding-bottom: 60px;
+
+                p {
+                    text-transform: uppercase;
+                    color: #E9C664;
+                    font-size: 20px;
+                    font-weight: 500;
+                    font-family: "Inter", sans-serif;
+                    margin: 0;
+                }
+
+                h2 {
+                    font-family: "Abril Fatface", serif;
+                    font-size: 40px;
+                    margin: 0;
+                    font-weight: 400;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                }
+            }
+
+            .news-cards {
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 20px;
+
+                    .card-inside {
+                        background: #000;
+                        padding: 36px 50px;
+                        height: 270px;
+
+                        h3 {
+                            color: #ffffff;
+                            font-size: 22px;
+                            font-weight: 400;
+                            font-family: "Abril Fatface", serif;
+                            margin: 0;
+                        }
+
+                        p {
+                            color: #ffffff;
+                            font-family: "Inter", sans-serif;
+                            font-size: 16px;
+                            font-weight: 400;
+                        }
+
+                        button {
+                            background: none;
+                            border: none;
+                            padding: 0;
+
+                            a {
+                                color: #E9C664;
+                                font-family: "Inter", sans-serif;
+                                font-size: 13px;
+                                font-weight: 600;
+                                text-decoration: none;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            background-image: url('../images/formbg.png');
+            background-repeat: no-repeat;
+            color: $white;
+            padding: 40px;
+            gap: 20px;
+
+            .contact-details {
+                flex: 1;
+                padding: 20px;
+                text-align: center;
+
+                h2 {
+                    font-family: "Abril Fatface", serif;
+                    font-size: 40px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    margin: 0 0 20px 0;
+                }
+
+                .office, .contact, .hours {
+                    font-family: "Inter", sans-serif;
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin: 15px 0 5px 0;
+                }
+
+                p {
+                    font-family: "Inter", sans-serif;
+                    font-size: 16px;
+                    margin: 0 0 10px 0;
+                }
+            }
+
+            .contact-form-container {
+                flex: 1;
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    input, textarea {
+                        padding: 10px;
+                        font-size: 16px;
+                        border: none;
+                        background-color: #333;
+                        color: $white;
+                        outline: none;
+
+                        textarea {
+                            height: 100px;
+                            resize: none;
+                        }
+                    }
+
+                    .btn-book {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: $gold;
+                        border: none;
+                        color: $black;
+                        font-family: "Inter", sans-serif;
+                        font-size: 16px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        transition: background-color 0.3s;
+
+                        &:hover {
+                            background-color: #d4b154;
+                        }
+                    }
+                }
+            }
+        }
+
+        .barbers {
+            background: $white;
+
+            .barbers-text {
+                text-align: center;
+
+                h2 {
+                    color: $black;
+                    font-size: 60px;
+                    font-weight: 400;
+                    font-family: "Abril Fatface", serif;
+                    margin: 0;
+                    margin-bottom: 60px;
+                }
+
+                p {
+                    color: $gold;
+                    font-family: "Inter", sans-serif;
+                    font-size: 20px;
+                    font-weight: 400;
+                    margin: 0;
+                    margin-top: 60px;
+                }
+            }
+
+            .barb-blocks {
+                padding-bottom: 50px;
+
+                .b-block {
+                    background: $dark;
+                    margin: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    transition: 0.3s;
+
+                    h3 {
+                        color: $white;
+                        font-weight: 400;
+                        font-family: "Abril Fatface", serif;
+                        font-size: 22px;
+                        margin: 20px 0 15px;
+                    }
+                    
+                    &:hover {
+                        transform: translateY(-12px);
+                        box-shadow: 0 15px 30px rgba(233, 198, 100, 0.2);
+                        
+                        h3 { color: $gold; }
+                    }
+
+                    .img-row {
+                        margin-bottom: 22px;
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+
+                        img {
+                            margin-right: 0;
+                            width: 32px;
+                            height: 32px;
+                            transition: transform 0.3s;
+                        }
+                        
+                        a:hover img {
+                             transform: scale(1.2);
+                        }
+                    }
+
+                    button {
+                        width: 156px;
+                        height: 40px;
+                        background: none;
+                        border: 2px solid $gold;
+                        margin-bottom: 30px;
+
+                        a {
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            color: $gold;
+                            font-size: 17px;
+                        }
+                    }
+
+                    .barb-first-img {
+                        width: 100%;
+                        height: 350px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        .brand-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: $dark;
+            text-align: center;
+
+            .brand-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 50px;
+
+                h2 {
+                    color: $white;
+                    font-family: "Abril Fatface", serif;
+                    font-size: 45px;
+                    margin: 0;
+                    margin-bottom: 30px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    color: $white;
+                    font-family: "Inter", sans-serif;
+                    font-size: 18px;
+                    width: 83%;
+                    margin: 0;
+                    margin-bottom: 50px;
+                }
+            }
+
+            .line {
+                width: 80%;
+                height: 2px;
+                background: $gold;
+                margin-bottom: 50px;
+            }
+
+            .brand-img {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 50px;
+                gap: 10px;
+
+                img {
+                    width: auto;
+                    height: 100px;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+
+    footer {
+        .contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .contacts-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                h2 {
+                    font-family: "Abril Fatface", serif;
+                    font-size: 50px;
+                    color: $black;
+                    margin: 0;
+                    margin-bottom: 25px;
+                    font-weight: 400;
+                    margin-top: 60px;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    font-family: "Inter", sans-serif;
+                    font-size: 16px;
+                    color: $black;
+                    margin: 0;
+                    margin-bottom: 80px;
+                    font-weight: 400;
+                }
+            }
+
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .contact-block {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    h3 {
+                        font-family: "Abril Fatface", serif;
+                        font-size: 20px;
+                        color: $black;
+                        margin: 0;
+                        margin-bottom: 15px;
+                        margin-top: 15px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                    }
+
+                    p {
+                        font-family: "Inter", sans-serif;
+                        font-size: 16px;
+                        color: $black;
+                        margin: 0;
+                        margin-bottom: 50px;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            .line {
+                width: 80%;
+                height: 2px;
+                background: $gold;
+                margin-bottom: 50px;
+            }
+        }
+
+        .copyright {
+            margin-bottom: 60px;
+        }
+    }
+
+    @media screen and (max-width: 575px) {
+        .desktop-menu-burger {
+            display: none;
+        }
+        .contacts-text, .brand-text {
+            margin: 0 20px;
+        }
+    }
+
+    @media screen and (min-width: 767px) and (max-width: 1025px) {
+        header {
+            height: 350px;
+            
+            nav {
+                margin-left: 20px;
+                margin-right: 20px;
+                padding-top: 20px;
+
+                .desktop-menu-visible {
+                    display: flex;
+                    justify-content: space-between;
+
+                    li {
+                        padding-bottom: 10px;
+                        padding-left: 10px;
+                        list-style: none;
+                        margin-right: 20px;
+
+                        a {
+                            font-size: 16px;
+                            font-weight: 300;
+                            color: $white;
+                            text-decoration: none;
+                            transition: 0.3s;
+                            &:hover { font-weight: 600; }
+                        }
+                        &:last-child { margin-right: 0; }
+                    }
+                }
+
+                .btn-book {
+                    width: 150px;
+                    height: 40px;
+                    a { font-size: 14px; }
+                }
+            }
+            .logo h1 { font-size: 50px; }
+        }
+
+        main {
+            .services {
+                margin-left: 20px;
+                margin-right: 20px;
+                
+                .main-blocks {
+                    .blocks {
+                        gap: 20px;
+                        margin-top: 30px;
+                        margin-bottom: 40px;
+                        .block {
+                            width: 280px;
+                            height: 280px;
+                            h3 { font-size: 20px; }
+                            p { font-size: 14px; padding: 0 20px; }
+                        }
+                    }
+                    .btn-explore {
+                        margin-bottom: 100px;
+                        a { font-size: 16px; padding: 0 15px; }
+                    }
+                }
+            }
+
+            .price-discount {
+                 padding-bottom: 30px;
+                 .pricing-block {
+                     padding-top: 40px;
+                     justify-content: center;
+                     .pricing-item {
+                         width: 45%;
+                         margin-bottom: 30px;
+                         .pricing-row {
+                             font-size: 20px;
+                             .pricing-line { width: 40%; }
+                         }
+                         .pricing-description { font-size: 13px; padding: 0 15px; }
+                     }
+                 }
+            }
+
+            .news {
+                padding-bottom: 30px;
+                .news-text {
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                    p { font-size: 16px; }
+                    h2 { font-size: 40px; }
+                }
+                .news-cards .card {
+                    padding: 15px;
+                    .card-inside {
+                        padding: 20px 30px;
+                        h3 { font-size: 18px; }
+                        p { font-size: 14px; }
+                        button a { font-size: 12px; }
+                    }
+                }
+            }
+
+            .news-main {
+                padding-bottom: 30px;
+
+                .news-text {
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+
+                    p {
+                        font-size: 16px;
+                    }
+
+                    h2 {
+                        font-size: 40px;
+                    }
+                }
+
+                .news-cards {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+
+                    .card {
+                        padding: 15px;
+
+                        img {
+                            width: 100%;
+                        }
+
+                        .card-inside {
+                            padding: 20px 30px;
+
+                            h3 {
+                                font-size: 18px;
+                            }
+
+                            p {
+                                font-size: 14px;
+                            }
+
+                            button {
+                                a {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .contact-form {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                gap: 15px;
+                .contact-details {
+                    padding: 15px;
+                    h2 { font-size: 32px; margin-bottom: 15px; }
+                    .office, .contact, .hours { font-size: 16px; margin: 10px 0 5px; }
+                    p { font-size: 14px; margin-bottom: 8px; }
+                }
+                .contact-form-container form {
+                    gap: 10px;
+                    input, textarea { padding: 8px; font-size: 14px; }
+                    textarea { height: 80px; }
+                    .btn-book { padding: 8px; font-size: 14px; }
+                }
+            }
+
+            .discount {
+                margin: 20px;
+                display: flex;
+                justify-content: space-between;
+                .d-block {
+                    width: 50%;
+                    padding: 20px;
+                    h3 { font-size: 18px; margin-top: 30px; }
+                    h2 { font-size: 40px; }
+                    p { font-size: 14px; }
+                    button { width: 100px; height: 40px; a { font-size: 14px; } }
+                }
+                .disc-img { width: 50%; }
+            }
+
+            .discount-sec {
+                    margin: 10px 20px;
+                    display: flex;
+                    justify-content: space-between;
+
+                .d-block {
+                      width: 50%;
+                     padding: 20px;
+
+                     h3 {
+                         font-size: 18px;
+                         margin-top: 30px;
+                    }
+
+                    h2 {
+                          font-size: 40px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    button {
+                         width: 100px;
+                         height: 40px;
+
+                         a {
+                             font-size: 14px;
+                        }
+                    }
+                }
+
+                .disc-img {
+                    width: 50%;
+                }
+            }
+
+            .discount-third {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+
+                .d-block {
+                    width: 50%;
+                    padding: 20px;
+
+                    h2 {
+                        font-size: 40px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    button {
+                        width: 120px;
+                        height: 40px;
+
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .disc-img {
+                    width: 50%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            
+            .discount-fourth {
+                margin: 20px;
+                display: flex;
+                justify-content: space-between;
+
+                .d-block {
+                    width: 50%;
+                    padding: 20px;
+
+                    h3 {
+                        font-size: 18px;
+                        margin-top: 30px;
+                    }
+
+                    h2 {
+                        font-size: 40px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    button {
+                        width: 100px;
+                        height: 40px;
+
+                        a {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .disc-img {
+                    width: 50%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .barbers {
+                 .barbers-text {
+                     margin: 0 20px;
+                     h2 { font-size: 40px; margin-bottom: 40px; }
+                     p { font-size: 16px; margin-top: 40px; }
+                 }
+                 .barb-blocks .b-block {
+                      width: 40%;
+                      margin: 20px;
+                      h3 { font-size: 20px; }
+                      .img-row img { width: 24px; margin-right: 15px; }
+                      button { width: 120px; height: 35px; a { font-size: 14px; } }
+                 }
+
+                 .barb-blocks{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                 }
+            }
+
+            .info {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding-top: 30px;
+                padding-bottom: 60px;
+                .info-block {
+                    width: 150px;
+                    height: 200px;
+                    margin-bottom: 30px;
+                    h2 { font-size: 40px; margin-top: 20px; }
+                    p { font-size: 18px; margin-top: 20px; }
+                }
+            }
+
+            .reviews {
+                padding: 40px;
+                .section-header { h2 { font-size: 32px; } p { font-size: 16px; } }
+                .reviews-block {
+                    justify-content: center;
+                    gap: 20px;
+                    .review-card {
+                        img { margin-bottom: 30px; }
+                        .review-text { font-size: 14px; margin-bottom: 30px; }
+                        .review-author { font-size: 14px; margin-bottom: 40px; }
+                    }
+                }
+            }
+
+            .brand-block {
+                padding: 20px;
+                .brand-text {
+                    margin-top: 30px;
+                    h2 { font-size: 36px; margin-bottom: 20px; }
+                    p { font-size: 16px; width: 90%; margin-bottom: 30px; }
+                }
+                .line { width: 90%; margin-bottom: 30px; }
+                .brand-img { gap: 10px; margin-bottom: 30px; img { width: 100px; height: auto; } }
+            }
+        }
+
+        footer {
+            .contacts {
+                .contacts-text {
+                    width: 90%;
+                    margin: 0 20px;
+                    h2 { font-size: 40px; margin-top: 40px; margin-bottom: 20px; }
+                    p { font-size: 14px; margin-bottom: 50px; }
+                }
+                .contact-info {
+                    width: 90%;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    .contact-block {
+                        width: 45%;
+                        margin-bottom: 30px;
+                        h3 { font-size: 18px; margin-bottom: 10px; }
+                        p { font-size: 14px; margin-bottom: 20px; }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        header {
+            height: 381px;
+
+            nav {
+                margin-left: 72px;
+                margin-right: 72px;
+                padding-top: 40px;
+
+                .desktop-menu { display: none; }
+                
+                .desktop-menu-visible {
+                    display: flex;
+                    justify-content: space-between;
+
+                    li {
+                        padding-bottom: 10px;
+                        padding-left: 20px;
+                        list-style: none;
+                        margin-right: 50px;
+
+                        a {
+                            font-family: "Inter", sans-serif;
+                            color: $white;
+                            font-size: 18px;
+                            text-decoration: none;
+                            font-weight: 300;
+                            transition: 0.3s;
+                            &:hover { font-size: 20px; font-weight: 800; }
+                        }
+                        &:last-child { margin-right: 0; }
+                    }
+                }
+            }
+
+            .logo img { width: 50%; }
+        }
+
+        main {
+            .services {
+                .main-blocks {
+                    .blocks {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        margin-top: 157px;
+                    }
+                    .btn-explore { margin-bottom: 239px; }
+                }
+            }
+
+            .services-sec{
+                .main-blocks{
+                    .blocks{
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                }
+            }
+
+            .news-main {
+                .news-cards {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    width: 80%;
+                    margin: 0 auto;
+                }
+
+                .card {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .price-discount {
+                .pricing-block {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    margin: 0 250px;
+                    .pricing-item .pricing-description { margin-left: 35px; }
+                }
+                .discount {
+                     display: flex;
+                     justify-content: space-between;
+                     margin: 20px 150px;
+                     .d-block {
+                         width: 540px;
+                         margin-left: 250px;
+                         h2 { font-size: 70px; margin-bottom: 0; }
+                         p { margin-bottom: 35px; }
+                     }
+                }
+
+                .discount-sec {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 20px 150px;
+
+                    .d-block {
+                        width: 540px;
+                        margin-left: 250px;
+
+                        h2 {
+                            font-size: 70px;
+                            margin-bottom: 0;
+                        }
+
+                        p {
+                            margin-bottom: 35px;
+                        }
+                    }
+                }
+            }
+
+            .discount-third {
+                display: flex;
+                justify-content: space-evenly;
+                height: 407px;
+
+                .d-block {
+                    width: 540px;
+
+                    h2 {
+                        font-size: 70px;
+                        margin-bottom: 0;
+                    }
+
+                    p {
+                        margin-bottom: 35px;
+                    }
+                }
+
+                .disc-img {
+                    img {
+                        width: auto;
+                        height: 528px;
+                        margin-top: -120px;
+                        z-index: 0;
+                    }
+                }
+            }
+
+            .discount-fourth {
+                display: flex;
+                justify-content: space-between;
+                margin: 70px 150px;
+
+                .d-block {
+                    width: 540px;
+                    margin-left: 250px;
+
+                    h2 {
+                        font-size: 70px;
+                        margin-bottom: 0;
+                    }
+
+                    p {
+                        margin-bottom: 35px;
+                    }
+                }
+            }
+
+            .barbers .barb-blocks {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                .b-block { width: 450px; }
+            }
+
+            .contact-form {
+                flex-direction: row;
+                justify-content: space-between;
+                 padding: 40px;
+                 .contact-details { padding: 20px; }
+                 .contact-form-container form {
+                     gap: 15px;
+                     input, textarea { padding: 10px; font-size: 16px; textarea { height: 100px; } }
+                     .btn-book { padding: 10px; font-size: 16px; }
+                 }
+            }
+
+            .info {
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            .discount {
+                display: flex;
+                justify-content: space-evenly;
+                height: 407px;
+                
+                &.inner-page-margin { margin: 70px 150px; }
+
+                .d-block {
+                    width: 540px;
+                    h2 { font-size: 70px; margin-bottom: 0; }
+                    p { margin-bottom: 35px; }
+                    
+                    &.offset-left { margin-left: 250px; }
+                }
+
+                .disc-img {
+                    img {
+                        width: auto;
+                        height: auto;
+                        margin-top: -120px;
+                        z-index: 0;
+                    }
+                }
+
+                .disc-img-second {
+                    display: flex;
+                    justify-content: end;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            
+
+            .reviews {
+                .reviews-block {
+                    justify-content: space-evenly;
+                    .review-card {
+                        .review-text { margin-bottom: 0; width: 300px; }
+                        .review-author { margin-bottom: 0; }
+                    }
+                }
+            }
+
+            .brand-block {
+                height: 560px;
+                flex-direction: row;
+
+                .brand-text {
+                    align-items: start;
+                    justify-content: center;
+                    width: 450px;
+                    margin-top: 0;
+                }
+
+                .line {
+                    margin-bottom: 0;
+                    transform: rotate(90deg);
+                    width: 20%;
+                }
+
+                .brand-img {
+                    width: 550px;
+                    gap: 10px;
+                }
+            }
+        }
+
+        footer {
+            .contacts {
+                .contacts-text { width: 770px; }
+                .contact-info {
+                    justify-content: space-evenly;
+                    flex-direction: row;
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
+
+body.home-page {
+    @media screen and (min-width: 1200px) {
+        header {
+            height: 950px;
+        }
+
+        main {
+            .services {
+                margin-left: 72px;
+                .text { padding-top: 70px; }
+                .main-blocks {
+                    width: 724px;
+                    .img-block-head {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media screen and (min-width: 760px) and (max-width: 1025px) {
+        header { height: 600px; }
+    }
+}
+
+
+.desktop-menu {
+    position: absolute;
+    right: -9999px;
+    top: 120px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    font-weight: 700;
+    font-size: .725rem;
+    transition: all .5s ease;
+    background-image: url('../images/mainbg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.desktop-menu__open {
+    right: 0;
+    transition: all .5s ease;
+}
+
+.desktop-menu-burger {
+    position: absolute;
+    right: -9999px;
+    top: 120px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    font-weight: 700;
+    font-size: .725rem;
+    transition: all .5s ease;
+    background-image: url('../images/mainbg.png');
+    background-size: cover;
+    background-position: center;
+
+    li {
+        padding-bottom: 10px;
+        padding-left: 20px;
+        list-style: none;
+
+        a {
+            font-family: "Inter", sans-serif;
+            color: $white;
+            font-size: 25px;
+            text-decoration: none;
+            font-weight: 300;
+        }
+
+        &:first-child {
+            padding-top: 20px;
+        }
+    }
+}
+
+.desktop-menu-burger__open {
+    right: 0;
+    transition: all .5s ease;
+}
+
+#deskMenuBurger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 320px;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+}
+
+#deskMenuBurger.desktop-menu-burger__open {
+    transform: translateX(0);
+}
+
+#toTopBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9998;
+    width: 50px;
+    height: 50px;
+    background: $gold;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#toTopBtn.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#toTopBtn:hover {
+    background: #f5d787;
+    transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+    #toTopBtn {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+.newsSwiper {
+    padding: 40px 20px;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+
+    &.swiper-initialized {
+        opacity: 1;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+        width: 320px;
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+
+        img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+    }
+
+    .card-inside {
+        padding: 25px;
+        text-align: center;
+
+        h3 {
+            font-family: "Abril Fatface", serif;
+            font-size: 22px;
+            margin: 0 0 15px;
+            color: #000;
+        }
+
+        p {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        button {
+            background: $gold;
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+
+            &:hover {
+                background: #000;
+                a { color: $gold; }
+            }
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: $gold;
+        background: rgba(0,0,0,0.5);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+
+        &:after {
+            font-size: 18px;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        background: #ccc;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $gold;
+    }
+}

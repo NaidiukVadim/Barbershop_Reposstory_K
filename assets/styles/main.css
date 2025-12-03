@@ -1,0 +1,1853 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow-x: hidden;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+.container .d-none {
+  display: none;
+}
+.container header {
+  background-image: url("../images/headerbg.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+}
+.container header .logo {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container header .logo h1 {
+  font-family: "Abril Fatface", serif;
+  color: #ffffff;
+  font-size: 70px;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.container header .logo img {
+  width: 60%;
+}
+.container header nav {
+  display: flex;
+  justify-content: space-between;
+}
+.container header nav .burger-menu-desk {
+  padding-top: 25px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.container header nav .desktop-menu li {
+  padding-bottom: 10px;
+  padding-left: 20px;
+  list-style: none;
+}
+.container header nav .desktop-menu li a {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: 300;
+}
+.container header nav .desktop-menu li:first-child {
+  padding-top: 20px;
+}
+.container header nav .desktop-menu li.active a {
+  font-weight: 800;
+}
+.container header nav .desktop-menu-visible {
+  display: none;
+}
+.container header nav .btn-book {
+  margin-top: 15px;
+  margin-right: 15px;
+  width: 191px;
+  height: 50px;
+  background: none;
+  border: 2px solid #E9C664;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container header nav .btn-book a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.container header nav .btn-book:hover {
+  background: #E9C664;
+  border: 2px solid #E9C664;
+}
+.container header nav .btn-book:hover a {
+  color: #000000;
+}
+.container main {
+  background-image: url("../images/mainbg.png");
+  background-size: cover;
+  background-position: center;
+}
+.container main .services .text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 20px;
+}
+.container main .services .text p {
+  color: #E9C664;
+  margin: 0;
+  font-weight: 300;
+  font-size: 19px;
+}
+.container main .services .text h1 {
+  color: #ffffff;
+  margin: 0;
+  font-weight: 300;
+  font-size: 50px;
+  font-family: "Abril Fatface", serif;
+}
+.container main .services .main-blocks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.container main .services .main-blocks .blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+.container main .services .main-blocks .blocks .block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 337px;
+  height: 337px;
+  border: 2px solid #E9C664;
+  color: #ffffff;
+  text-align: center;
+}
+.container main .services .main-blocks .blocks .block h3 {
+  text-transform: uppercase;
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+}
+.container main .services .main-blocks .blocks .block p {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.container main .services .main-blocks .img-block-head {
+  position: absolute;
+  top: 200px;
+  left: 1100px;
+  width: 600px;
+  height: auto;
+  display: none;
+}
+.container main .services .main-blocks .btn-explore {
+  text-transform: uppercase;
+  background: none;
+  border: 2px solid #E9C664;
+  height: 50px;
+  margin-bottom: 150px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+.container main .services .main-blocks .btn-explore a {
+  color: #E9C664;
+  text-decoration: none;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.container main .services .main-blocks .btn-explore:hover {
+  background: #E9C664;
+  border: 2px solid #E9C664;
+}
+.container main .services .main-blocks .btn-explore:hover a {
+  color: #000000;
+}
+.container main .price-discount {
+  background: #212121;
+  padding-bottom: 50px;
+}
+.container main .price-discount .pricing-block {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 60px;
+}
+.container main .price-discount .pricing-block .pricing-item {
+  margin-bottom: 50px;
+  width: 100%;
+}
+.container main .price-discount .pricing-block .pricing-item .pricing-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 25px;
+  color: #ffffff;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.container main .price-discount .pricing-block .pricing-item .pricing-row .pricing-title, .container main .price-discount .pricing-block .pricing-item .pricing-row .pricing-amount {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+}
+.container main .price-discount .pricing-block .pricing-item .pricing-row .pricing-line {
+  width: 50%;
+  height: 2px;
+  border-bottom: 1px solid #E9C664;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.container main .price-discount .pricing-block .pricing-item .pricing-description {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  padding: 0 40px;
+  width: 95%;
+}
+.container main .price-discount .discount {
+  background: #E9C664;
+  margin: 10px 30px;
+}
+.container main .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #212121;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.container main .info .info-block {
+  width: 270px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.container main .info .info-block h2 {
+  font-size: 50px;
+  color: #E9C664;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin-top: 35px;
+  font-family: "Abril Fatface", serif;
+}
+.container main .info .info-block p {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  margin-top: 35px;
+  font-family: "Abril Fatface", serif;
+}
+.container main .info .info-block:last-child {
+  margin-bottom: 0;
+}
+.container main .discount {
+  background: #E9C664;
+}
+.container main .discount .d-block {
+  padding: 30px;
+}
+.container main .discount .d-block h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+.container main .discount .d-block h2 {
+  font-size: 50px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Abril Fatface", serif;
+}
+.container main .discount .d-block p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.container main .discount .d-block button {
+  width: 200px;
+  color: #E9C664;
+  text-transform: uppercase;
+  background: #000000;
+  border: none;
+  height: 50px;
+  transition: 0.3s;
+}
+.container main .discount .d-block button a {
+  color: #E9C664;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 900;
+}
+.container main .discount .d-block button:hover {
+  background: #E9C664;
+  border: 2px solid #000000;
+}
+.container main .discount .d-block button:hover a {
+  color: #000000;
+}
+.container main .discount .d-block.white-btn-text button {
+  color: white;
+}
+.container main .discount .d-block.white-btn-text button a {
+  color: white;
+}
+.container main .discount .disc-img {
+  display: flex;
+  justify-content: end;
+}
+.container main .discount .disc-img img {
+  width: 50%;
+}
+.container main .discount-sec {
+  background: #E9C664;
+  margin: 10px 30px;
+}
+.container main .discount-sec .d-block {
+  padding: 30px;
+}
+.container main .discount-sec .d-block h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+.container main .discount-sec .d-block h2 {
+  font-size: 50px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Abril Fatface", serif;
+}
+.container main .discount-sec .d-block p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.container main .discount-sec .d-block button {
+  width: 150px;
+  color: white;
+  text-transform: uppercase;
+  background: #000000;
+  border: none;
+  height: 50px;
+  transition: 0.3s;
+}
+.container main .discount-sec .d-block button a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 900;
+}
+.container main .discount-sec .d-block button:hover {
+  background: #E9C664;
+  border: 2px solid #000000;
+}
+.container main .discount-sec .d-block button:hover a {
+  color: #000000;
+}
+.container main .discount-sec .disc-img-second {
+  display: flex;
+  justify-content: end;
+}
+.container main .discount-sec .disc-img-second img {
+  width: 100%;
+}
+.container main .discount-third {
+  background: #E9C664;
+}
+.container main .discount-third .d-block {
+  padding: 30px;
+}
+.container main .discount-third .d-block h2 {
+  font-size: 50px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Abril Fatface", serif;
+}
+.container main .discount-third .d-block p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.container main .discount-third .d-block button {
+  width: 150px;
+  color: #E9C664;
+  text-transform: uppercase;
+  background: #000000;
+  border: none;
+  height: 50px;
+  transition: 0.3s;
+}
+.container main .discount-third .d-block button a {
+  color: #E9C664;
+  text-decoration: none;
+  font-size: 20px;
+}
+.container main .discount-third .d-block button:hover {
+  background: #E9C664;
+  border: 2px solid #000000;
+}
+.container main .discount-third .d-block button:hover a {
+  color: #000000;
+}
+.container main .discount-third .disc-img {
+  display: flex;
+  justify-content: end;
+}
+.container main .discount-third .disc-img img {
+  width: 50%;
+}
+.container main .discount-fourth {
+  background: #E9C664;
+  margin: 30px 30px;
+}
+.container main .discount-fourth .d-block {
+  padding: 30px;
+}
+.container main .discount-fourth .d-block h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+.container main .discount-fourth .d-block h2 {
+  font-size: 50px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Abril Fatface", serif;
+}
+.container main .discount-fourth .d-block p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.container main .discount-fourth .d-block button {
+  width: 150px;
+  color: white;
+  text-transform: uppercase;
+  background: #000000;
+  border: none;
+  height: 50px;
+  transition: 0.3s;
+}
+.container main .discount-fourth .d-block button a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 900;
+}
+.container main .discount-fourth .d-block button:hover {
+  background: #E9C664;
+  border: 2px solid #000000;
+}
+.container main .discount-fourth .d-block button:hover a {
+  color: #000000;
+}
+.container main .discount-fourth .disc-img {
+  display: flex;
+  justify-content: end;
+}
+.container main .discount-fourth .disc-img img {
+  width: 100%;
+}
+.container main .reviews {
+  background: #ffffff;
+  padding: 60px;
+}
+.container main .reviews .section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.container main .reviews .section-header h2 {
+  margin: 0;
+  font-size: 35px;
+  font-family: "Abril Fatface", serif;
+}
+.container main .reviews .section-header p {
+  font-size: 20px;
+  color: #E9C664;
+}
+.container main .reviews .reviews-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.container main .reviews .reviews-block .review-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container main .reviews .reviews-block .review-card img {
+  margin-bottom: 50px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+.container main .reviews .reviews-block .review-card .review-text {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.container main .reviews .reviews-block .review-card .review-author {
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  color: #E9C664;
+  font-weight: 700;
+  font-size: 16px;
+}
+.container main .reviews .reviews-block .review-card:last-child .review-author {
+  margin-bottom: 0;
+}
+.container main .news {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #212121;
+  padding-bottom: 50px;
+}
+.container main .news .news-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.container main .news .news-text p {
+  text-transform: uppercase;
+  color: #E9C664;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+.container main .news .news-text h2 {
+  font-family: "Abril Fatface", serif;
+  font-size: 50px;
+  margin: 0;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.container main .news .news-cards .card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.container main .news .news-cards .card img {
+  width: 100%;
+}
+.container main .news .news-cards .card .card-inside {
+  background: #000;
+  padding: 36px 50px;
+  height: 200px;
+}
+.container main .news .news-cards .card .card-inside h3 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: "Abril Fatface", serif;
+  margin: 0;
+}
+.container main .news .news-cards .card .card-inside p {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.container main .news .news-cards .card .card-inside button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.container main .news .news-cards .card .card-inside button a {
+  color: #E9C664;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.container main .news-main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #212121;
+  padding-bottom: 50px;
+}
+.container main .news-main .news-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.container main .news-main .news-text p {
+  text-transform: uppercase;
+  color: #E9C664;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+.container main .news-main .news-text h2 {
+  font-family: "Abril Fatface", serif;
+  font-size: 40px;
+  margin: 0;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.container main .news-main .news-cards .card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.container main .news-main .news-cards .card .card-inside {
+  background: #000;
+  padding: 36px 50px;
+  height: 270px;
+}
+.container main .news-main .news-cards .card .card-inside h3 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: "Abril Fatface", serif;
+  margin: 0;
+}
+.container main .news-main .news-cards .card .card-inside p {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.container main .news-main .news-cards .card .card-inside button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.container main .news-main .news-cards .card .card-inside button a {
+  color: #E9C664;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.container main .contact-form {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/formbg.png");
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding: 40px;
+  gap: 20px;
+}
+.container main .contact-form .contact-details {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+.container main .contact-form .contact-details h2 {
+  font-family: "Abril Fatface", serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+}
+.container main .contact-form .contact-details .office, .container main .contact-form .contact-details .contact, .container main .contact-form .contact-details .hours {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 15px 0 5px 0;
+}
+.container main .contact-form .contact-details p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  margin: 0 0 10px 0;
+}
+.container main .contact-form .contact-form-container {
+  flex: 1;
+}
+.container main .contact-form .contact-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.container main .contact-form .contact-form-container form input, .container main .contact-form .contact-form-container form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  background-color: #333;
+  color: #ffffff;
+  outline: none;
+}
+.container main .contact-form .contact-form-container form input textarea, .container main .contact-form .contact-form-container form textarea textarea {
+  height: 100px;
+  resize: none;
+}
+.container main .contact-form .contact-form-container form .btn-book {
+  width: 100%;
+  padding: 10px;
+  background-color: #E9C664;
+  border: none;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.container main .contact-form .contact-form-container form .btn-book:hover {
+  background-color: #d4b154;
+}
+.container main .barbers {
+  background: #ffffff;
+}
+.container main .barbers .barbers-text {
+  text-align: center;
+}
+.container main .barbers .barbers-text h2 {
+  color: #000000;
+  font-size: 60px;
+  font-weight: 400;
+  font-family: "Abril Fatface", serif;
+  margin: 0;
+  margin-bottom: 60px;
+}
+.container main .barbers .barbers-text p {
+  color: #E9C664;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 60px;
+}
+.container main .barbers .barb-blocks {
+  padding-bottom: 50px;
+}
+.container main .barbers .barb-blocks .b-block {
+  background: #212121;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+}
+.container main .barbers .barb-blocks .b-block h3 {
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Abril Fatface", serif;
+  font-size: 22px;
+  margin: 20px 0 15px;
+}
+.container main .barbers .barb-blocks .b-block:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 30px rgba(233, 198, 100, 0.2);
+}
+.container main .barbers .barb-blocks .b-block:hover h3 {
+  color: #E9C664;
+}
+.container main .barbers .barb-blocks .b-block .img-row {
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.container main .barbers .barb-blocks .b-block .img-row img {
+  margin-right: 0;
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s;
+}
+.container main .barbers .barb-blocks .b-block .img-row a:hover img {
+  transform: scale(1.2);
+}
+.container main .barbers .barb-blocks .b-block button {
+  width: 156px;
+  height: 40px;
+  background: none;
+  border: 2px solid #E9C664;
+  margin-bottom: 30px;
+}
+.container main .barbers .barb-blocks .b-block button a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #E9C664;
+  font-size: 17px;
+}
+.container main .barbers .barb-blocks .b-block .barb-first-img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container main .brand-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #212121;
+  text-align: center;
+}
+.container main .brand-block .brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.container main .brand-block .brand-text h2 {
+  color: #ffffff;
+  font-family: "Abril Fatface", serif;
+  font-size: 45px;
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.container main .brand-block .brand-text p {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  width: 83%;
+  margin: 0;
+  margin-bottom: 50px;
+}
+.container main .brand-block .line {
+  width: 80%;
+  height: 2px;
+  background: #E9C664;
+  margin-bottom: 50px;
+}
+.container main .brand-block .brand-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 10px;
+}
+.container main .brand-block .brand-img img {
+  width: auto;
+  height: 100px;
+  margin: 10px;
+}
+.container footer .contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.container footer .contacts .contacts-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.container footer .contacts .contacts-text h2 {
+  font-family: "Abril Fatface", serif;
+  font-size: 50px;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 400;
+  margin-top: 60px;
+  text-transform: uppercase;
+}
+.container footer .contacts .contacts-text p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 80px;
+  font-weight: 400;
+}
+.container footer .contacts .contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container footer .contacts .contact-info .contact-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container footer .contacts .contact-info .contact-block h3 {
+  font-family: "Abril Fatface", serif;
+  font-size: 20px;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.container footer .contacts .contact-info .contact-block p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+.container footer .contacts .line {
+  width: 80%;
+  height: 2px;
+  background: #E9C664;
+  margin-bottom: 50px;
+}
+.container footer .copyright {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 575px) {
+  .container .desktop-menu-burger {
+    display: none;
+  }
+  .container .contacts-text, .container .brand-text {
+    margin: 0 20px;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1025px) {
+  .container header {
+    height: 350px;
+  }
+  .container header nav {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+  }
+  .container header nav .desktop-menu-visible {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container header nav .desktop-menu-visible li {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    list-style: none;
+    margin-right: 20px;
+  }
+  .container header nav .desktop-menu-visible li a {
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .container header nav .desktop-menu-visible li a:hover {
+    font-weight: 600;
+  }
+  .container header nav .desktop-menu-visible li:last-child {
+    margin-right: 0;
+  }
+  .container header nav .btn-book {
+    width: 150px;
+    height: 40px;
+  }
+  .container header nav .btn-book a {
+    font-size: 14px;
+  }
+  .container header .logo h1 {
+    font-size: 50px;
+  }
+  .container main .services {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .container main .services .main-blocks .blocks {
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  .container main .services .main-blocks .blocks .block {
+    width: 280px;
+    height: 280px;
+  }
+  .container main .services .main-blocks .blocks .block h3 {
+    font-size: 20px;
+  }
+  .container main .services .main-blocks .blocks .block p {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+  .container main .services .main-blocks .btn-explore {
+    margin-bottom: 100px;
+  }
+  .container main .services .main-blocks .btn-explore a {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+  .container main .price-discount {
+    padding-bottom: 30px;
+  }
+  .container main .price-discount .pricing-block {
+    padding-top: 40px;
+    justify-content: center;
+  }
+  .container main .price-discount .pricing-block .pricing-item {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+  .container main .price-discount .pricing-block .pricing-item .pricing-row {
+    font-size: 20px;
+  }
+  .container main .price-discount .pricing-block .pricing-item .pricing-row .pricing-line {
+    width: 40%;
+  }
+  .container main .price-discount .pricing-block .pricing-item .pricing-description {
+    font-size: 13px;
+    padding: 0 15px;
+  }
+  .container main .news {
+    padding-bottom: 30px;
+  }
+  .container main .news .news-text {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .container main .news .news-text p {
+    font-size: 16px;
+  }
+  .container main .news .news-text h2 {
+    font-size: 40px;
+  }
+  .container main .news .news-cards .card {
+    padding: 15px;
+  }
+  .container main .news .news-cards .card .card-inside {
+    padding: 20px 30px;
+  }
+  .container main .news .news-cards .card .card-inside h3 {
+    font-size: 18px;
+  }
+  .container main .news .news-cards .card .card-inside p {
+    font-size: 14px;
+  }
+  .container main .news .news-cards .card .card-inside button a {
+    font-size: 12px;
+  }
+  .container main .news-main {
+    padding-bottom: 30px;
+  }
+  .container main .news-main .news-text {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .container main .news-main .news-text p {
+    font-size: 16px;
+  }
+  .container main .news-main .news-text h2 {
+    font-size: 40px;
+  }
+  .container main .news-main .news-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container main .news-main .news-cards .card {
+    padding: 15px;
+  }
+  .container main .news-main .news-cards .card img {
+    width: 100%;
+  }
+  .container main .news-main .news-cards .card .card-inside {
+    padding: 20px 30px;
+  }
+  .container main .news-main .news-cards .card .card-inside h3 {
+    font-size: 18px;
+  }
+  .container main .news-main .news-cards .card .card-inside p {
+    font-size: 14px;
+  }
+  .container main .news-main .news-cards .card .card-inside button a {
+    font-size: 12px;
+  }
+  .container main .contact-form {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+  }
+  .container main .contact-form .contact-details {
+    padding: 15px;
+  }
+  .container main .contact-form .contact-details h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .container main .contact-form .contact-details .office, .container main .contact-form .contact-details .contact, .container main .contact-form .contact-details .hours {
+    font-size: 16px;
+    margin: 10px 0 5px;
+  }
+  .container main .contact-form .contact-details p {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .container main .contact-form .contact-form-container form {
+    gap: 10px;
+  }
+  .container main .contact-form .contact-form-container form input, .container main .contact-form .contact-form-container form textarea {
+    padding: 8px;
+    font-size: 14px;
+  }
+  .container main .contact-form .contact-form-container form textarea {
+    height: 80px;
+  }
+  .container main .contact-form .contact-form-container form .btn-book {
+    padding: 8px;
+    font-size: 14px;
+  }
+  .container main .discount {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .container main .discount .d-block {
+    width: 50%;
+    padding: 20px;
+  }
+  .container main .discount .d-block h3 {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+  .container main .discount .d-block h2 {
+    font-size: 40px;
+  }
+  .container main .discount .d-block p {
+    font-size: 14px;
+  }
+  .container main .discount .d-block button {
+    width: 100px;
+    height: 40px;
+  }
+  .container main .discount .d-block button a {
+    font-size: 14px;
+  }
+  .container main .discount .disc-img {
+    width: 50%;
+  }
+  .container main .discount-sec {
+    margin: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .container main .discount-sec .d-block {
+    width: 50%;
+    padding: 20px;
+  }
+  .container main .discount-sec .d-block h3 {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+  .container main .discount-sec .d-block h2 {
+    font-size: 40px;
+  }
+  .container main .discount-sec .d-block p {
+    font-size: 14px;
+  }
+  .container main .discount-sec .d-block button {
+    width: 100px;
+    height: 40px;
+  }
+  .container main .discount-sec .d-block button a {
+    font-size: 14px;
+  }
+  .container main .discount-sec .disc-img {
+    width: 50%;
+  }
+  .container main .discount-third {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .container main .discount-third .d-block {
+    width: 50%;
+    padding: 20px;
+  }
+  .container main .discount-third .d-block h2 {
+    font-size: 40px;
+  }
+  .container main .discount-third .d-block p {
+    font-size: 14px;
+  }
+  .container main .discount-third .d-block button {
+    width: 120px;
+    height: 40px;
+  }
+  .container main .discount-third .d-block button a {
+    font-size: 16px;
+  }
+  .container main .discount-third .disc-img {
+    width: 50%;
+  }
+  .container main .discount-third .disc-img img {
+    width: 100%;
+  }
+  .container main .discount-fourth {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .container main .discount-fourth .d-block {
+    width: 50%;
+    padding: 20px;
+  }
+  .container main .discount-fourth .d-block h3 {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+  .container main .discount-fourth .d-block h2 {
+    font-size: 40px;
+  }
+  .container main .discount-fourth .d-block p {
+    font-size: 14px;
+  }
+  .container main .discount-fourth .d-block button {
+    width: 100px;
+    height: 40px;
+  }
+  .container main .discount-fourth .d-block button a {
+    font-size: 14px;
+  }
+  .container main .discount-fourth .disc-img {
+    width: 50%;
+  }
+  .container main .discount-fourth .disc-img img {
+    width: 100%;
+  }
+  .container main .barbers .barbers-text {
+    margin: 0 20px;
+  }
+  .container main .barbers .barbers-text h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .container main .barbers .barbers-text p {
+    font-size: 16px;
+    margin-top: 40px;
+  }
+  .container main .barbers .barb-blocks .b-block {
+    width: 40%;
+    margin: 20px;
+  }
+  .container main .barbers .barb-blocks .b-block h3 {
+    font-size: 20px;
+  }
+  .container main .barbers .barb-blocks .b-block .img-row img {
+    width: 24px;
+    margin-right: 15px;
+  }
+  .container main .barbers .barb-blocks .b-block button {
+    width: 120px;
+    height: 35px;
+  }
+  .container main .barbers .barb-blocks .b-block button a {
+    font-size: 14px;
+  }
+  .container main .barbers .barb-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container main .info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+  .container main .info .info-block {
+    width: 150px;
+    height: 200px;
+    margin-bottom: 30px;
+  }
+  .container main .info .info-block h2 {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+  .container main .info .info-block p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .container main .reviews {
+    padding: 40px;
+  }
+  .container main .reviews .section-header h2 {
+    font-size: 32px;
+  }
+  .container main .reviews .section-header p {
+    font-size: 16px;
+  }
+  .container main .reviews .reviews-block {
+    justify-content: center;
+    gap: 20px;
+  }
+  .container main .reviews .reviews-block .review-card img {
+    margin-bottom: 30px;
+  }
+  .container main .reviews .reviews-block .review-card .review-text {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .container main .reviews .reviews-block .review-card .review-author {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+  .container main .brand-block {
+    padding: 20px;
+  }
+  .container main .brand-block .brand-text {
+    margin-top: 30px;
+  }
+  .container main .brand-block .brand-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .container main .brand-block .brand-text p {
+    font-size: 16px;
+    width: 90%;
+    margin-bottom: 30px;
+  }
+  .container main .brand-block .line {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+  .container main .brand-block .brand-img {
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  .container main .brand-block .brand-img img {
+    width: 100px;
+    height: auto;
+  }
+  .container footer .contacts .contacts-text {
+    width: 90%;
+    margin: 0 20px;
+  }
+  .container footer .contacts .contacts-text h2 {
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  .container footer .contacts .contacts-text p {
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+  .container footer .contacts .contact-info {
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container footer .contacts .contact-info .contact-block {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+  .container footer .contacts .contact-info .contact-block h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .container footer .contacts .contact-info .contact-block p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container header {
+    height: 381px;
+  }
+  .container header nav {
+    margin-left: 72px;
+    margin-right: 72px;
+    padding-top: 40px;
+  }
+  .container header nav .desktop-menu {
+    display: none;
+  }
+  .container header nav .desktop-menu-visible {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container header nav .desktop-menu-visible li {
+    padding-bottom: 10px;
+    padding-left: 20px;
+    list-style: none;
+    margin-right: 50px;
+  }
+  .container header nav .desktop-menu-visible li a {
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 300;
+    transition: 0.3s;
+  }
+  .container header nav .desktop-menu-visible li a:hover {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .container header nav .desktop-menu-visible li:last-child {
+    margin-right: 0;
+  }
+  .container header .logo img {
+    width: 50%;
+  }
+  .container main .services .main-blocks .blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 157px;
+  }
+  .container main .services .main-blocks .btn-explore {
+    margin-bottom: 239px;
+  }
+  .container main .services-sec .main-blocks .blocks {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container main .news-main .news-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+    margin: 0 auto;
+  }
+  .container main .news-main .card {
+    margin-bottom: 20px;
+  }
+  .container main .price-discount .pricing-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 250px;
+  }
+  .container main .price-discount .pricing-block .pricing-item .pricing-description {
+    margin-left: 35px;
+  }
+  .container main .price-discount .discount {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 150px;
+  }
+  .container main .price-discount .discount .d-block {
+    width: 540px;
+    margin-left: 250px;
+  }
+  .container main .price-discount .discount .d-block h2 {
+    font-size: 70px;
+    margin-bottom: 0;
+  }
+  .container main .price-discount .discount .d-block p {
+    margin-bottom: 35px;
+  }
+  .container main .price-discount .discount-sec {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 150px;
+  }
+  .container main .price-discount .discount-sec .d-block {
+    width: 540px;
+    margin-left: 250px;
+  }
+  .container main .price-discount .discount-sec .d-block h2 {
+    font-size: 70px;
+    margin-bottom: 0;
+  }
+  .container main .price-discount .discount-sec .d-block p {
+    margin-bottom: 35px;
+  }
+  .container main .discount-third {
+    display: flex;
+    justify-content: space-evenly;
+    height: 407px;
+  }
+  .container main .discount-third .d-block {
+    width: 540px;
+  }
+  .container main .discount-third .d-block h2 {
+    font-size: 70px;
+    margin-bottom: 0;
+  }
+  .container main .discount-third .d-block p {
+    margin-bottom: 35px;
+  }
+  .container main .discount-third .disc-img img {
+    width: auto;
+    height: 528px;
+    margin-top: -120px;
+    z-index: 0;
+  }
+  .container main .discount-fourth {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 150px;
+  }
+  .container main .discount-fourth .d-block {
+    width: 540px;
+    margin-left: 250px;
+  }
+  .container main .discount-fourth .d-block h2 {
+    font-size: 70px;
+    margin-bottom: 0;
+  }
+  .container main .discount-fourth .d-block p {
+    margin-bottom: 35px;
+  }
+  .container main .barbers .barb-blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container main .barbers .barb-blocks .b-block {
+    width: 450px;
+  }
+  .container main .contact-form {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+  }
+  .container main .contact-form .contact-details {
+    padding: 20px;
+  }
+  .container main .contact-form .contact-form-container form {
+    gap: 15px;
+  }
+  .container main .contact-form .contact-form-container form input, .container main .contact-form .contact-form-container form textarea {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .container main .contact-form .contact-form-container form input textarea, .container main .contact-form .contact-form-container form textarea textarea {
+    height: 100px;
+  }
+  .container main .contact-form .contact-form-container form .btn-book {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .container main .info {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .container main .discount {
+    display: flex;
+    justify-content: space-evenly;
+    height: 407px;
+  }
+  .container main .discount.inner-page-margin {
+    margin: 70px 150px;
+  }
+  .container main .discount .d-block {
+    width: 540px;
+  }
+  .container main .discount .d-block h2 {
+    font-size: 70px;
+    margin-bottom: 0;
+  }
+  .container main .discount .d-block p {
+    margin-bottom: 35px;
+  }
+  .container main .discount .d-block.offset-left {
+    margin-left: 250px;
+  }
+  .container main .discount .disc-img img {
+    width: auto;
+    height: auto;
+    margin-top: -120px;
+    z-index: 0;
+  }
+  .container main .discount .disc-img-second {
+    display: flex;
+    justify-content: end;
+  }
+  .container main .discount .disc-img-second img {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+  }
+  .container main .reviews .reviews-block {
+    justify-content: space-evenly;
+  }
+  .container main .reviews .reviews-block .review-card .review-text {
+    margin-bottom: 0;
+    width: 300px;
+  }
+  .container main .reviews .reviews-block .review-card .review-author {
+    margin-bottom: 0;
+  }
+  .container main .brand-block {
+    height: 560px;
+    flex-direction: row;
+  }
+  .container main .brand-block .brand-text {
+    align-items: start;
+    justify-content: center;
+    width: 450px;
+    margin-top: 0;
+  }
+  .container main .brand-block .line {
+    margin-bottom: 0;
+    transform: rotate(90deg);
+    width: 20%;
+  }
+  .container main .brand-block .brand-img {
+    width: 550px;
+    gap: 10px;
+  }
+  .container footer .contacts .contacts-text {
+    width: 770px;
+  }
+  .container footer .contacts .contact-info {
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body.home-page header {
+    height: 950px;
+  }
+  body.home-page main .services {
+    margin-left: 72px;
+  }
+  body.home-page main .services .text {
+    padding-top: 70px;
+  }
+  body.home-page main .services .main-blocks {
+    width: 724px;
+  }
+  body.home-page main .services .main-blocks .img-block-head {
+    display: block;
+  }
+}
+@media screen and (min-width: 760px) and (max-width: 1025px) {
+  body.home-page header {
+    height: 600px;
+  }
+}
+
+.desktop-menu {
+  position: absolute;
+  right: -9999px;
+  top: 120px;
+  width: 100%;
+  height: calc(100vh - 60px);
+  font-weight: 700;
+  font-size: 0.725rem;
+  transition: all 0.5s ease;
+  background-image: url("../images/mainbg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.desktop-menu__open {
+  right: 0;
+  transition: all 0.5s ease;
+}
+
+.desktop-menu-burger {
+  position: absolute;
+  right: -9999px;
+  top: 120px;
+  width: 100%;
+  height: calc(100vh - 60px);
+  font-weight: 700;
+  font-size: 0.725rem;
+  transition: all 0.5s ease;
+  background-image: url("../images/mainbg.png");
+  background-size: cover;
+  background-position: center;
+}
+.desktop-menu-burger li {
+  padding-bottom: 10px;
+  padding-left: 20px;
+  list-style: none;
+}
+.desktop-menu-burger li a {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: 300;
+}
+.desktop-menu-burger li:first-child {
+  padding-top: 20px;
+}
+
+.desktop-menu-burger__open {
+  right: 0;
+  transition: all 0.5s ease;
+}
+
+#deskMenuBurger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 320px;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+}
+
+#deskMenuBurger.desktop-menu-burger__open {
+  transform: translateX(0);
+}
+
+#toTopBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9998;
+  width: 50px;
+  height: 50px;
+  background: #E9C664;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.35s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#toTopBtn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#toTopBtn:hover {
+  background: #f5d787;
+  transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+  #toTopBtn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+.newsSwiper {
+  padding: 40px 20px;
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.newsSwiper.swiper-initialized {
+  opacity: 1;
+}
+.newsSwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+.newsSwiper .card {
+  width: 320px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+.newsSwiper .card:hover {
+  transform: translateY(-10px);
+}
+.newsSwiper .card img {
+  width: 100%;
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.newsSwiper .card-inside {
+  padding: 25px;
+  text-align: center;
+}
+.newsSwiper .card-inside h3 {
+  font-family: "Abril Fatface", serif;
+  font-size: 22px;
+  margin: 0 0 15px;
+  color: #000;
+}
+.newsSwiper .card-inside p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.newsSwiper .card-inside button {
+  background: #E9C664;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.newsSwiper .card-inside button a {
+  text-decoration: none;
+  color: #000;
+}
+.newsSwiper .card-inside button:hover {
+  background: #000;
+}
+.newsSwiper .card-inside button:hover a {
+  color: #E9C664;
+}
+.newsSwiper .swiper-button-next,
+.newsSwiper .swiper-button-prev {
+  color: #E9C664;
+  background: rgba(0, 0, 0, 0.5);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.newsSwiper .swiper-button-next:after,
+.newsSwiper .swiper-button-prev:after {
+  font-size: 18px;
+}
+.newsSwiper .swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+.newsSwiper .swiper-pagination-bullet-active {
+  background: #E9C664;
+}/*# sourceMappingURL=main.css.map */
