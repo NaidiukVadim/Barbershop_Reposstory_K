@@ -23,6 +23,40 @@ $dark: #212121;
 $black: #000000;
 $white: #ffffff;
 
+.btn-book {
+    width: 191px;
+    height: 50px;
+    background: none;
+    border: 2px solid $gold;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: $white;
+
+    a, p {
+        text-decoration: none;
+        color: inherit;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &:hover {
+        background: $gold;
+        border: 2px solid $gold;
+        color: $black;
+    }
+}
+
 .container {
     .d-none {
         display: none;
@@ -105,7 +139,7 @@ $white: #ffffff;
                 align-items: center;
                 justify-content: center;
 
-                a {
+                p {
                     text-decoration: none;
                     color: $white;
                     text-transform: uppercase;
@@ -115,7 +149,7 @@ $white: #ffffff;
                     background: $gold;
                     border: 2px solid $gold;
 
-                    a {
+                    p {
                         color: $black;
                     }
                 }
@@ -362,27 +396,19 @@ $white: #ffffff;
                     border: none;
                     height: 50px;
                     transition: 0.3s;
-
-                    a {
-                        color: $gold;
-                        text-decoration: none;
-                        font-size: 20px;
-                        font-weight: 900;
-                    }
-
-                    &:hover {
+                    font-size: 20px;
+                    font-weight: 900;  
+                    
+                     &:hover {
                         background: $gold;
                         border: 2px solid $black;
-
-                        a {
-                            color: $black;
-                        }
+                        color: $black;
                     }
-                }
-                
-                &.white-btn-text button {
+
+                    &.white-btn-text button {
                      color: white;
                      a { color: white; }
+                }
                 }
             }
 
@@ -432,7 +458,7 @@ $white: #ffffff;
                         height: 50px;
                         transition: 0.3s;
 
-                        a {
+                        p {
                             color: white;
                             text-decoration: none;
                             font-size: 16px;
@@ -443,7 +469,7 @@ $white: #ffffff;
                             background: #E9C664;
                             border: 2px solid #000000;
 
-                            a {
+                            p {
                                 color: #000000;
                             }
                         }
@@ -487,7 +513,7 @@ $white: #ffffff;
                     height: 50px;
                     transition: 0.3s;
 
-                    a {
+                    p {
                         color: #E9C664;
                         text-decoration: none;
                         font-size: 20px;
@@ -497,7 +523,7 @@ $white: #ffffff;
                         background: #E9C664;
                         border: 2px solid #000000;
 
-                        a {
+                        p {
                             color: #000000;
                         }
                     }
@@ -550,7 +576,7 @@ $white: #ffffff;
                     height: 50px;
                     transition: 0.3s;
 
-                    a {
+                    p {
                         color: white;
                         text-decoration: none;
                         font-size: 16px;
@@ -561,7 +587,7 @@ $white: #ffffff;
                         background: #E9C664;
                         border: 2px solid #000000;
 
-                        a {
+                        p {
                             color: #000000;
                         }
                     }
@@ -677,6 +703,7 @@ $white: #ffffff;
                     display: flex;
                     flex-direction: column;
                     padding: 20px;
+                    
 
                     img {
                         width: 100%;
@@ -1325,7 +1352,7 @@ $white: #ffffff;
                          width: 100px;
                          height: 40px;
 
-                         a {
+                         p {
                              font-size: 14px;
                         }
                     }
@@ -1568,6 +1595,9 @@ $white: #ffffff;
 
                 .card {
                     margin-bottom: 20px;
+                    img{
+                        height: 180px;
+                    }
                 }
             }
 
@@ -1772,7 +1802,7 @@ $white: #ffffff;
 
 body.home-page {
     @media screen and (min-width: 1200px) {
-        header {
+        .header {
             height: 950px;
         }
 
@@ -1813,6 +1843,7 @@ body.home-page {
 .desktop-menu__open {
     right: 0;
     transition: all .5s ease;
+    z-index: 9999;
 }
 
 .desktop-menu-burger {
@@ -2006,4 +2037,131 @@ body.home-page {
     .swiper-pagination-bullet-active {
         background: $gold;
     }
+}
+
+
+.modal {
+    display: none;
+}
+
+.modal.is-open {
+    display: block;
+}
+
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal__container {
+    background-color: #212121;
+    padding: 40px 30px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    border: 2px solid $gold;
+    border-radius: 4px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.modal__title {
+    margin: 0;
+    font-family: "Abril Fatface", serif;
+    font-size: 28px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.modal__close {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 14px;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background-color: $gold;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+.modal__content {
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    input, textarea {
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        border: 1px solid #444;
+        padding: 15px;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        box-sizing: border-box;
+        
+        &::placeholder {
+            color: #aaa;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $gold;
+        }
+    }
+
+    textarea {
+        resize: none;
+        height: 120px;
+    }
+
+    .btn-book {
+        width: 100%;
+        margin-top: 10px;
+        background-color: $gold;
+        color: $black;
+        border: none;
+
+        &:hover {
+            background-color: #d4b154;
+            border: none;
+        }
+    }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }

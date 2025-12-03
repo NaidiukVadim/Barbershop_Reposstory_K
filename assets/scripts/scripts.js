@@ -95,3 +95,64 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => newsSwiper.update(), 500);
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    if (typeof MicroModal !== 'undefined') {
+        MicroModal.init({
+            onShow: modal => console.info(`${modal.id} is shown`),
+            onClose: modal => console.info(`${modal.id} is hidden`),
+            openTrigger: 'data-micromodal-trigger', 
+            closeTrigger: 'data-micromodal-close', 
+            openClass: 'is-open', 
+            disableScroll: true, 
+            disableFocus: false,
+            awaitOpenAnimation: false, 
+            awaitCloseAnimation: false, 
+            debugMode: true 
+        });
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    AOS.init();
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.num-counter');
+    const speed = 200;
+
+    const animate = (counter) => {
+        const value = +counter.getAttribute('data-val');
+        const data = +counter.innerText;
+        
+        const time = value / speed; 
+
+        if (data < value) {
+            counter.innerText = Math.ceil(data + time);
+            setTimeout(() => animate(counter), 20); 
+        } else {
+            counter.innerText = value;
+        }
+    };
+
+    const observerOptions = {
+        root: null,
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                animate(counter);
+                observer.unobserve(counter);
+            }
+        });
+    }, observerOptions);
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+});

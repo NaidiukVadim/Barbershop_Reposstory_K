@@ -12,6 +12,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
         <link rel="stylesheet" href="assets/styles/main.css">
     </head>
     <body>
@@ -45,8 +46,8 @@
                         <li><a href="#brands">Бренди</a></li>
                         <li><a href="#contact">Контакти</a></li>
                     </ul>
-                    <button class="btn-book">
-                        <a href="#"><p>Записатися</p></a>
+                    <button class="btn-book" data-micromodal-trigger="modal-book">
+                        <p style="pointer-events: none;">Записатися</p>
                     </button>
                 </nav>
                <div class="logo">
@@ -62,20 +63,20 @@
                     <div class="barb-blocks" id="barbersContainer">
                     </div>
                 </div>
-                <div class="info" id="info">
+                <div class="info" id="info" data-aos="fade-up">
                     <div class="info-block">
                         <img src="assets/images/icons/icon razor.svg" alt="" width="50px">
-                        <h2>2500</h2>
-                        <p>Голінь</p>
+                        <h2><span class="num-counter" data-val="2500">0</span>+</h2>
+                        <p>Сеансів гоління</p>
                     </div>
-                     <div class="info-block">
+                    <div class="info-block">
                         <img src="assets/images/icons/icon scissors.svg" alt="" width="50px">
-                        <h2>4500</h2>
+                        <h2><span class="num-counter" data-val="4500">0</span>+</h2>
                         <p>Стрижок</p>
                     </div>
-                     <div class="info-block">
+                    <div class="info-block">
                         <img src="assets/images/icons/icon barbershop.svg" alt="" width="50px">
-                        <h2>23</h2>
+                        <h2><span class="num-counter" data-val="23">0</span></h2>
                         <p>Відкритих салонів</p>
                     </div>
                 </div>
@@ -83,7 +84,7 @@
                     <div class="d-block">
                         <h2>Знижка 25%</h2>
                         <p>Тільки до кінця місяця — кожна стрижка та гоління з бонусом 25%! Подаруй собі ідеальний образ і заощади. Акція діє у всіх наших салонах.</p>
-                        <button><a href="">Записатися</a></button>
+                        <button data-micromodal-trigger="modal-book">Записатися</button>
                     </div>
                     <div class="disc-img">
                         <img src="assets/images/discountimg.png" alt="">
@@ -149,7 +150,30 @@
                 <i class="fa-solid fa-arrow-up"></i>
             </button>
         </div>
-        <script src="assets/scripts/scripts.js"></script>
+        <div class="modal micromodal-slide" id="modal-book" aria-hidden="true">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-book-title">
+                    <header class="modal__header">
+                        <h2 class="modal__title" id="modal-book-title">
+                            Запис на стрижку
+                        </h2>
+                        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                    </header>
+                    <div class="modal__content" id="modal-book-content">
+                        <div class="contact-form-container" style="padding: 0;">
+                            <form action="https://formspree.io/f/mrbddpre" method="POST">
+                                <input type="text" name="name" placeholder="Ваше ім’я" required>
+                                <input type="email" name="email" placeholder="Ваша пошта" required>
+                                <input type="text" name="subject" placeholder="Тема (Стрижка/Борода)" required>
+                                <textarea name="message" placeholder="Бажана дата та час" required></textarea>
+                                <button type="submit" class="btn-book" style="width: 100%; margin-top: 15px;">ЗАПИСАТИСЯ</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="assets/scripts/about.js"></script>
+        <script src="assets/scripts/scripts.js"></script>
     </body>
 </html>

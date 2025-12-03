@@ -18,6 +18,38 @@ html {
   box-sizing: border-box;
 }
 
+.btn-book {
+  width: 191px;
+  height: 50px;
+  background: none;
+  border: 2px solid #E9C664;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #ffffff;
+}
+.btn-book a, .btn-book p {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-book:hover {
+  background: #E9C664;
+  border: 2px solid #E9C664;
+  color: #000000;
+}
+
 .container .d-none {
   display: none;
 }
@@ -87,7 +119,7 @@ html {
   align-items: center;
   justify-content: center;
 }
-.container header nav .btn-book a {
+.container header nav .btn-book p {
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
@@ -96,7 +128,7 @@ html {
   background: #E9C664;
   border: 2px solid #E9C664;
 }
-.container header nav .btn-book:hover a {
+.container header nav .btn-book:hover p {
   color: #000000;
 }
 .container main {
@@ -307,24 +339,18 @@ html {
   border: none;
   height: 50px;
   transition: 0.3s;
-}
-.container main .discount .d-block button a {
-  color: #E9C664;
-  text-decoration: none;
   font-size: 20px;
   font-weight: 900;
 }
 .container main .discount .d-block button:hover {
   background: #E9C664;
   border: 2px solid #000000;
-}
-.container main .discount .d-block button:hover a {
   color: #000000;
 }
-.container main .discount .d-block.white-btn-text button {
+.container main .discount .d-block button.white-btn-text button {
   color: white;
 }
-.container main .discount .d-block.white-btn-text button a {
+.container main .discount .d-block button.white-btn-text button a {
   color: white;
 }
 .container main .discount .disc-img {
@@ -367,7 +393,7 @@ html {
   height: 50px;
   transition: 0.3s;
 }
-.container main .discount-sec .d-block button a {
+.container main .discount-sec .d-block button p {
   color: white;
   text-decoration: none;
   font-size: 16px;
@@ -377,7 +403,7 @@ html {
   background: #E9C664;
   border: 2px solid #000000;
 }
-.container main .discount-sec .d-block button:hover a {
+.container main .discount-sec .d-block button:hover p {
   color: #000000;
 }
 .container main .discount-sec .disc-img-second {
@@ -412,7 +438,7 @@ html {
   height: 50px;
   transition: 0.3s;
 }
-.container main .discount-third .d-block button a {
+.container main .discount-third .d-block button p {
   color: #E9C664;
   text-decoration: none;
   font-size: 20px;
@@ -421,7 +447,7 @@ html {
   background: #E9C664;
   border: 2px solid #000000;
 }
-.container main .discount-third .d-block button:hover a {
+.container main .discount-third .d-block button:hover p {
   color: #000000;
 }
 .container main .discount-third .disc-img {
@@ -464,7 +490,7 @@ html {
   height: 50px;
   transition: 0.3s;
 }
-.container main .discount-fourth .d-block button a {
+.container main .discount-fourth .d-block button p {
   color: white;
   text-decoration: none;
   font-size: 16px;
@@ -474,7 +500,7 @@ html {
   background: #E9C664;
   border: 2px solid #000000;
 }
-.container main .discount-fourth .d-block button:hover a {
+.container main .discount-fourth .d-block button:hover p {
   color: #000000;
 }
 .container main .discount-fourth .disc-img {
@@ -1182,7 +1208,7 @@ html {
     width: 100px;
     height: 40px;
   }
-  .container main .discount-sec .d-block button a {
+  .container main .discount-sec .d-block button p {
     font-size: 14px;
   }
   .container main .discount-sec .disc-img {
@@ -1445,6 +1471,9 @@ html {
   .container main .news-main .card {
     margin-bottom: 20px;
   }
+  .container main .news-main .card img {
+    height: 180px;
+  }
   .container main .price-discount .pricing-block {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1633,7 +1662,7 @@ html {
 }
 
 @media screen and (min-width: 1200px) {
-  body.home-page header {
+  body.home-page .header {
     height: 950px;
   }
   body.home-page main .services {
@@ -1672,6 +1701,7 @@ html {
 .desktop-menu__open {
   right: 0;
   transition: all 0.5s ease;
+  z-index: 9999;
 }
 
 .desktop-menu-burger {
@@ -1850,4 +1880,129 @@ html {
 }
 .newsSwiper .swiper-pagination-bullet-active {
   background: #E9C664;
+}
+
+.modal {
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal__container {
+  background-color: #212121;
+  padding: 40px 30px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  border: 2px solid #E9C664;
+  border-radius: 4px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.modal__title {
+  margin: 0;
+  font-family: "Abril Fatface", serif;
+  font-size: 28px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.modal__close {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.modal__close::before, .modal__close::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #E9C664;
+  transform: rotate(45deg);
+}
+.modal__close::after {
+  transform: rotate(-45deg);
+}
+
+.modal__content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.modal__content input, .modal__content textarea {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 15px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.modal__content input::-moz-placeholder, .modal__content textarea::-moz-placeholder {
+  color: #aaa;
+}
+.modal__content input::placeholder, .modal__content textarea::placeholder {
+  color: #aaa;
+}
+.modal__content input:focus, .modal__content textarea:focus {
+  outline: none;
+  border-color: #E9C664;
+}
+.modal__content textarea {
+  resize: none;
+  height: 120px;
+}
+.modal__content .btn-book {
+  width: 100%;
+  margin-top: 10px;
+  background-color: #E9C664;
+  color: #000000;
+  border: none;
+}
+.modal__content .btn-book:hover {
+  background-color: #d4b154;
+  border: none;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }/*# sourceMappingURL=main.css.map */

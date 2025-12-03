@@ -12,6 +12,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
         <link rel="stylesheet" href="assets/styles/main.css">
     </head>
     <body>
@@ -45,8 +46,8 @@
                         <li><a href="#brands">Бренди</a></li>
                         <li><a href="#contact">Контакти</a></li>
                     </ul>
-                    <button class="btn-book">
-                        <a href="#"><p>Записатися</p></a>
+                    <button class="btn-book" data-micromodal-trigger="modal-book">
+                        <p style="pointer-events: none;">Записатися</p>
                     </button>
                 </nav>
                <div class="logo">
@@ -61,7 +62,7 @@
                     </div>
                     <div class="news-cards">
                         <div class="card">
-                            <img src="assets/images/news1.png" alt="">
+                            <img src="assets/images/news1.jpg" alt="">
                             <div class="card-inside">
                                 <h3>Топ-5 зачісок 2025 року</h3>
                                 <p>Які стрижки будуть у тренді цієї весни? Розповідаємо про найактуальніші варіанти для сучасного чоловіка.</p>
@@ -69,7 +70,7 @@
                             </div>
                         </div>
                         <div class="card">
-                            <img src="assets/images/news2.png" alt="">
+                            <img src="assets/images/news2.webp" alt="">
                             <div class="card-inside">
                                 <h3>Як правильно доглядати за бородою взимку</h3>
                                 <p>Мороз і вітер — вороги здорової бороди. Ділимося лайфхаками від наших барберів.</p>
@@ -77,7 +78,7 @@
                             </div>
                         </div>
                         <div class="card">
-                            <img src="assets/images/news3.png" alt="">
+                            <img src="assets/images/news3.jpg" alt="">
                             <div class="card-inside">
                                 <h3>Новий салон у центрі міста</h3>
                                 <p>Відкрили ще одну локацію! Тепер ще зручніше записатися до улюбленого майстра.</p>
@@ -85,7 +86,7 @@
                             </div>
                         </div>
                         <div class="card">
-                            <img src="assets/images/news4.png" alt="">
+                            <img src="assets/images/news4.jpg" alt="">
                             <div class="card-inside">
                                 <h3>Класичне гоління небезпечною бритвою</h3>
                                 <p>Чому справжні чоловіки обирають саме цей ритуал? Розповідає наш старший барбер.</p>
@@ -93,7 +94,7 @@
                             </div>
                         </div>
                         <div class="card">
-                            <img src="assets/images/news5.png" alt="">
+                            <img src="assets/images/news5.jpg" alt="">
                             <div class="card-inside">
                                 <h3>Яку помаду для волосся обрати</h3>
                                 <p>Огляд засобів для укладки: від матових паст до блискучих бриолінів.</p>
@@ -101,7 +102,7 @@
                             </div>
                         </div>
                         <div class="card">
-                            <img src="assets/images/news6.png" alt="">
+                            <img src="assets/images/news6.jpg" alt="">
                             <div class="card-inside">
                                 <h3>Історія барбершопу: від минулого до сьогодення</h3>
                                 <p>Як перукарні для чоловіків стали символом стилю та традицій.</p>
@@ -109,7 +110,7 @@
                             </div>
                         </div>
                         <div class="card">
-                            <img src="assets/images/news7.png" alt="">
+                            <img src="assets/images/news7.jpg" alt="">
                             <div class="card-inside">
                                 <h3>Чому варто спробувати камуфляж сивини</h3>
                                 <p>Сучасне рішення для чоловіків, які хочуть виглядати молодше без радикальних змін.</p>
@@ -117,7 +118,7 @@
                             </div>
                         </div>
                         <div class="card">
-                            <img src="assets/images/news8.png" alt="">
+                            <img src="assets/images/news8.webp" alt="">
                             <div class="card-inside">
                                 <h3>Тату на голові: новий тренд чи божевілля?</h3>
                                 <p>Розбираємося разом із майстрами, які вже спробували це на собі.</p>
@@ -170,6 +171,29 @@
             <button id="toTopBtn" aria-label="Вгору">
                 <i class="fa-solid fa-arrow-up"></i>
             </button>
+        </div>
+        <div class="modal micromodal-slide" id="modal-book" aria-hidden="true">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-book-title">
+                    <header class="modal__header">
+                        <h2 class="modal__title" id="modal-book-title">
+                            Запис на стрижку
+                        </h2>
+                        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                    </header>
+                    <div class="modal__content" id="modal-book-content">
+                        <div class="contact-form-container" style="padding: 0;">
+                            <form action="https://formspree.io/f/mrbddpre" method="POST">
+                                <input type="text" name="name" placeholder="Ваше ім’я" required>
+                                <input type="email" name="email" placeholder="Ваша пошта" required>
+                                <input type="text" name="subject" placeholder="Тема (Стрижка/Борода)" required>
+                                <textarea name="message" placeholder="Бажана дата та час" required></textarea>
+                                <button type="submit" class="btn-book" style="width: 100%; margin-top: 15px;">ЗАПИСАТИСЯ</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="assets/scripts/scripts.js"></script>
     </body>
